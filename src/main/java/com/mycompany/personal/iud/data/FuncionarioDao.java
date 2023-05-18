@@ -11,7 +11,11 @@ import java.util.List;
 
 public class FuncionarioDao {
 
-    private static final String GET_FUNCIONARIO = "SELECT * FROM funcionario";
+    private static final String GET_FUNCIONARIO = "SELECT funcionario.*, tipo_identificacion.tipo_identificacion, estado.estado, sexo.sexo "
+            + "FROM funcionario "
+            + "INNER JOIN tipo_identificacion ON tipo_identificacion.id_tidentificacion = funcionario.id_tidentificacion "
+            + "INNER JOIN estado ON estado.id_estado = funcionario.id_estado "
+            + "INNER JOIN sexo ON sexo.id_sexo = funcionario.id_sexo";
 
     private static final String CREATE_FUNCIONARIO = "INSERT INTO funcionario (id_tidentificacion, nombre, apellido, n_identificacion, id_estado, id_sexo, direccion, telefono, fecha_nacimiento) "
             + "VALUES (?,?,?,?,?,?,?,?,?)";
@@ -39,12 +43,12 @@ public class FuncionarioDao {
 
                 Funcionario funcionario = new Funcionario();
                 funcionario.setId_funcionario(resultSet.getInt("Id_funcionario"));
-                funcionario.setId_tidentificacion(resultSet.getInt("id_tidentificacion"));
+                funcionario.setTipo_identificacion(resultSet.getString("tipo_identificacion"));
                 funcionario.setNombre(resultSet.getString("nombre"));
                 funcionario.setApellido(resultSet.getString("apellido"));
                 funcionario.setN_identificacion(resultSet.getInt("n_identificacion"));
-                funcionario.setId_estado(resultSet.getInt("id_estado"));
-                funcionario.setId_sexo(resultSet.getInt("id_sexo"));
+                funcionario.setEstado(resultSet.getString("estado"));
+                funcionario.setSexo(resultSet.getString("sexo"));
                 funcionario.setDireccion(resultSet.getString("direccion"));
                 funcionario.setTelefono(resultSet.getString("telefono"));
                 funcionario.setFecha_nacimiento(resultSet.getString("fecha_nacimiento"));
@@ -104,7 +108,6 @@ public class FuncionarioDao {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-
         Funcionario funcionario = null;
 
         try {
@@ -115,6 +118,8 @@ public class FuncionarioDao {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
+                
+                funcionario = new Funcionario();
                 funcionario.setId_funcionario(resultSet.getInt("id_funcionario"));
                 funcionario.setId_tidentificacion(resultSet.getInt("id_tidentificacion"));
                 funcionario.setNombre(resultSet.getString("nombre"));

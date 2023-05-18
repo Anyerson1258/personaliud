@@ -16,12 +16,12 @@ public class Main {
             } else {
                 funcionarios.forEach(funcionario -> {
                     System.out.println("ID Funcionario: " + funcionario.getId_funcionario());
-                    System.out.println("Tipo identificacion: " + funcionario.getId_tidentificacion());
+                    System.out.println("Tipo identificacion: " + funcionario.getTipo_identificacion());
                     System.out.println("Nombre: " + funcionario.getNombre());
                     System.out.println("Apellido: " + funcionario.getApellido());
                     System.out.println("Numero identificacion: " + funcionario.getN_identificacion());
-                    System.out.println("Estado Civil: " + funcionario.getId_estado());
-                    System.out.println("Sexo: " + funcionario.getId_sexo());
+                    System.out.println("Estado Civil: " + funcionario.getEstado());
+                    System.out.println("Sexo: " + funcionario.getSexo());
                     System.out.println("Direccion: " + funcionario.getDireccion());
                     System.out.println("Telefono: " + funcionario.getTelefono());
                     System.out.println("Fecha nacimiento: " + funcionario.getFecha_nacimiento());
@@ -44,15 +44,17 @@ public class Main {
             System.out.println("El tipo de identificacion es: " + id_tidentificacion);
             System.out.println("*****************************");
             System.out.println("*****************************");
-
+            
+            Scanner sc2 = new Scanner(System.in);
             System.out.println("Ingrese el nombre o nombres:");
-            String nombre = sc.nextLine();
+            String nombre = sc2.nextLine();
             System.out.println("El nombre completo del funcionario es: " + nombre);
             System.out.println("*****************************");
             System.out.println("*****************************");
 
+            Scanner sc3 = new Scanner(System.in);
             System.out.println("Ingrese el apellido o apellidos");
-            String apellido = sc.nextLine();
+            String apellido = sc3.nextLine();
             System.out.println("El apellido del funcionario es: " + apellido);
             System.out.println("*****************************");
             System.out.println("*****************************");

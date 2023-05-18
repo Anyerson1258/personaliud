@@ -1,8 +1,7 @@
-
 package com.mycompany.personal.iud.domain;
 
 public class Nivel_estudio {
-    
+
     private int id_destudio ;
     private String nivel_estudio;
 
@@ -26,6 +25,5 @@ public class Nivel_estudio {
     public String toString() {
         return nivel_estudio + " ";
     }
-    
-    
+
 }

@@ -1,19 +1,21 @@
-
 package com.mycompany.personal.iud.domain;
 
-
 public class Funcionario {
-    
+
     private int id_funcionario;
     private int id_tidentificacion;
+    private String tipo_identificacion;
     private String nombre;
     private String apellido;
     private int n_identificacion;
     private int id_estado;
+    private String estado;
     private int id_sexo;
+    private String sexo;
     private String direccion;
     private String telefono;
     private String fecha_nacimiento;
+    
 
     public int getId_funcionario() {
         return id_funcionario;
@@ -47,6 +49,16 @@ public class Funcionario {
         this.apellido = apellido;
     }
 
+    public String getTipo_identificacion() {
+        return tipo_identificacion;
+    }
+
+    public void setTipo_identificacion(String tipo_identificacion) {
+        this.tipo_identificacion = tipo_identificacion;
+    }
+    
+    
+
     public int getN_identificacion() {
         return n_identificacion;
     }
@@ -58,6 +70,23 @@ public class Funcionario {
     public int getId_estado() {
         return id_estado;
     }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+    
 
     public void setId_estado(int id_estado) {
         this.id_estado = id_estado;
@@ -99,7 +128,5 @@ public class Funcionario {
     public String toString() {
         return id_tidentificacion + " " + nombre + " " + apellido + " " + n_identificacion;
     }
-    
-    
-    
+
 }

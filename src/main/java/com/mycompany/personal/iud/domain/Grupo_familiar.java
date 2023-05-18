@@ -1,11 +1,9 @@
-
 package com.mycompany.personal.iud.domain;
 
-
 public class Grupo_familiar {
-    
+
     private int id_gfamiliar;
-    private int id_funcionario ;
+    private int id_funcionario;
     private String apellido;
     private String rol;
 
@@ -43,8 +41,7 @@ public class Grupo_familiar {
 
     @Override
     public String toString() {
-        return id_funcionario + " " + apellido + " " + rol ;
+        return id_funcionario + " " + apellido + " " + rol;
     }
-    
-    
+
 }

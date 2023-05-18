@@ -1,10 +1,7 @@
-
 package com.mycompany.personal.iud.domain;
 
-
 public class Informacion_academica {
-    
-    
+
     private int id_academica;
     private int id_funcionario;
     private int id_universidad;
@@ -53,8 +50,7 @@ public class Informacion_academica {
 
     @Override
     public String toString() {
-        return id_funcionario + " " + id_universidad ;
+        return id_funcionario + " " + id_universidad;
     }
-    
-    
+
 }

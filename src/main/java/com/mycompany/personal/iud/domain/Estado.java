@@ -1,8 +1,7 @@
-
 package com.mycompany.personal.iud.domain;
 
 public class Estado {
-    
+
     private int id_estado;
     private String estado;
 
@@ -26,6 +25,5 @@ public class Estado {
     public String toString() {
         return estado + " ";
     }
-    
-    
+
 }
