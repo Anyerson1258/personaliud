@@ -39,7 +39,9 @@ public class Main {
         try {
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Digite el Tipo de Identificacion:");
+            System.out.println("Digite el tipo de Identificacion "
+                    + "\n1:TARJETA IDENTIDAD "
+                    + "\n2:CEDULA CIUDADANIA");
             int id_tidentificacion = sc.nextInt();
             System.out.println("El tipo de identificacion es: " + id_tidentificacion);
             System.out.println("*****************************");
@@ -48,49 +50,58 @@ public class Main {
             Scanner sc2 = new Scanner(System.in);
             System.out.println("Ingrese el nombre o nombres:");
             String nombre = sc2.nextLine();
-            System.out.println("El nombre completo del funcionario es: " + nombre);
-            System.out.println("*****************************");
-            System.out.println("*****************************");
-
             Scanner sc3 = new Scanner(System.in);
+            System.out.println("Ingrese el apellido o apellidos");
+            String apellido = sc3.nextLine();
+            System.out.println("El nombre completo del funcionario es:" + nombre + " "+ apellido);
+            System.out.println("*****************************");
+            System.out.println("*****************************");
+            
+            /*Scanner sc3 = new Scanner(System.in);
             System.out.println("Ingrese el apellido o apellidos");
             String apellido = sc3.nextLine();
             System.out.println("El apellido del funcionario es: " + apellido);
             System.out.println("*****************************");
-            System.out.println("*****************************");
+            System.out.println("*****************************");*/
 
+            Scanner sc4 = new Scanner(System.in);
             System.out.println("Ingrese el Numero de identificacion");
-            int n_identificacion = sc.nextInt();
+            int n_identificacion = sc4.nextInt();
             System.out.println("El numero de identificacion es: " + n_identificacion);
             System.out.println("*****************************");
             System.out.println("*****************************");
 
-            System.out.println("Ingrese el Estado civil");
-            int id_estado = sc.nextInt();
+            Scanner sc5 = new Scanner(System.in);
+            System.out.println("Ingrese el Estado civil \n1:CASADO/A \n2:SOLTERO/A");
+            int id_estado = sc5.nextInt();
             System.out.println("El estado civil del funcionario es: " + id_estado);
             System.out.println("*****************************");
             System.out.println("*****************************");
 
-            System.out.println("Ingrese el sexo");
-            int id_sexo = sc.nextInt();
+            Scanner sc6 = new Scanner(System.in);
+            System.out.println("Ingrese el sexo \n1:MASCULINO\n2:FEMENINO");
+            int id_sexo = sc6.nextInt();
             System.out.println("El sexo del funcionario es: " + id_sexo);
             System.out.println("*****************************");
             System.out.println("*****************************");
 
+            Scanner sc7 = new Scanner(System.in);
             System.out.println("Ingrese la direccion");
-            String direccion = sc.nextLine();
+            String direccion = sc7.nextLine();
             System.out.println("La direccion del funcionario es: " + direccion);
             System.out.println("*****************************");
             System.out.println("*****************************");
 
+            Scanner sc8 = new Scanner(System.in);
             System.out.println("Ingrese el telefono");
-            String telefono = sc.nextLine();
+            String telefono = sc8.nextLine();
             System.out.println("El telefono del funcionario es: " + telefono);
             System.out.println("*****************************");
             System.out.println("*****************************");
 
+            Scanner sc9 = new Scanner(System.in);
             System.out.println("Ingrese la fecha de nacimiento en el formato AAAA-MM-DD");
-            String fecha_nacimiento = sc.nextLine();
+            String fecha_nacimiento = sc9.nextLine();
             System.out.println("La fecha de nacimiento es: " + fecha_nacimiento);
             System.out.println("*****************************");
             System.out.println("*****************************");
@@ -155,6 +166,7 @@ public class Main {
             System.out.println("*****************************");
             System.out.println("ELIGUE UNA OPCION");
             System.out.println("*****************************");
+            System.out.println("0. SALIR DE LA APLICACION");
             System.out.println("1. LISTAR FUNCIONARIOS");
             System.out.println("2. CREAR FUNCIONARIOS");
             System.out.println("3. ELIMINAR FUNCIONARIO");

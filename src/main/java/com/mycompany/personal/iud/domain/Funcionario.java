@@ -126,7 +126,7 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return id_tidentificacion + " " + nombre + " " + apellido + " " + n_identificacion;
+        return tipo_identificacion + " " + nombre + " " + apellido + " " + n_identificacion;
     }
 
 }
